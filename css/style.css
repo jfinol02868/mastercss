@@ -1,0 +1,9 @@
+body { 
+    background: #fefefe;
+}
+
+h1 {
+    color: seagreen; 
+    font-size: 50px;
+    text-shadow: 5px 5px 10px rgb(131, 141, 144);
+}
