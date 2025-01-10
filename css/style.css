@@ -1,9 +1,94 @@
-body { 
-    background: #fefefe;
+/* Selectores de css */
+
+/* 
+    Regla de prioridad para aplica estilos
+    1.- #id
+    2.- clase
+    3.- etiqueta
+    Lee de arriba hacia abajo y el último estilo aplicado es el que predomina sobre la maqutacion
+*/
+
+/* Selector universal '*', para selecionar todos los elementos del documento */
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* Selector etiqueta */
 h1 {
-    color: seagreen; 
-    font-size: 50px;
-    text-shadow: 5px 5px 10px rgb(131, 141, 144);
+    background: red; /* Color de fondo del h1 */
+    color: white; /* Color para el texto del h1 */
+    padding: 10px; /* Espacio interno del h1 */
+    text-shadow: -1px 5px 12px white;
 }
+
+a {
+    font-size: 18px; /* tamaño del texto del link */
+    color: green; /* Color del texto del link */
+    text-decoration: none; /* Quitar cualquier decoracion al link en este caso la linea inferior */
+}
+
+footer a { /* Seleccionamos y aplicamos mas caracteriticas a los link dentro de footer (esto no elimina los anteriores aplicado pero se pueden sobreescribir) */
+    color: blue; /* Cambiamos el colo a azul */
+    font-size: 14px; /* Cambiamos el tamaño de letra */
+}
+
+/* Selector id  los ids deben ser unicos en las paginas no se pueden repetir*/
+#description, #titulo {  /* Me permite aplicar las mismas propiedades de #titulo sumadas a las que ya tengo en mi definicion */
+    border: 2px solid black; /* Borde negro solido de un pixel */
+}
+
+#titulo {
+    background: blue; /* Color de fondo azul */
+    border: 1px dashed white ; /* Borde negro punteado de un pixel */
+}
+
+/* Selector clase */
+
+.parrafo {
+    font-style: italic; /* Aspecto de la tipografia */
+    /*text-decoration: underline; /* Para subrayar el texto */
+    font-weight: bold; /* para decirle que sea de tipo negrita */
+}
+
+.parrafo1, .parrafo3 {
+    background: gray; /* Color de fondo del parrafo 2 */
+    color: white; /* Color de texto o las letras */
+    padding: 5px; /* Margen interno de la etiqueta parrafo */
+}
+
+.parrafo3 {
+    background: brown; /* Color de fondo del parrafo 3 */
+}
+
+/* Seleccionamos el dev y apuntamos el elemento form */
+#usuario form {
+    margin-top: 10px; /* Margen superior */
+    margin-bottom: 15px; /* Margen inferior */
+    border: 5px dashed green; /* Border del formulario */
+    padding: 20px; /* Margen interno del formulario */
+}
+
+#usuario form * { /* Para hacer que todos los elemento que estan dentro del form se coloquen uno debajo del otro */
+    display: block; /* Hacer que los elementos se muestren uno debajo del otro */
+}
+
+#usuario form input[type="text"] { /* Para dar estilos a unos elementos en concreto dentro del formulario */
+    border: 1px solid rgb(183, 180, 180);  /* Aplicar estilos solo a los elementos de tipo texto que estan dentro del formulario */
+    margin-bottom: 15px; /* Margen inferior */
+    margin-top: 2px; /* Margen superior */
+    border-radius: 5px; /* Borde de las esquinas */
+    padding:8px; /* borde interno de la aplicacion */
+    width: 50%; /* Tamaño de la caja de texto en relacion al espacion que tiene */
+}
+
+#usuario form input[type="submit"] {
+    background: green; /* Colo de fondo del boton */
+    color: white; /* Color del texto del boton */
+    padding: 15px; /* Margen interno del boton */
+    font-size: 15px; /* Tamaño de la letra del boton */
+    text-transform: capitalize; /* Capitalizado del texto del boton */
+    border: 1px solid yellow; /* Borde del boton */
+}
+
+/* Selector atributo */
+
