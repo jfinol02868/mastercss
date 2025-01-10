@@ -88,6 +88,7 @@ footer a { /* Seleccionamos y aplicamos mas caracteriticas a los link dentro de 
     font-size: 15px; /* Tamaño de la letra del boton */
     text-transform: capitalize; /* Capitalizado del texto del boton */
     border: 1px solid yellow; /* Borde del boton */
+    cursor: pointer;
 }
 
 /* Selector atributo */
