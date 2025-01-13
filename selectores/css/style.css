@@ -73,7 +73,7 @@ footer a { /* Seleccionamos y aplicamos mas caracteriticas a los link dentro de 
 }
 
 #usuario form input[type="text"] { /* Para dar estilos a unos elementos en concreto dentro del formulario */
-    border: 1px solid rgb(183, 180, 180);  /* Aplicar estilos solo a los elementos de tipo texto que estan dentro del formulario */
+    border: 1px dashed rgb(183, 180, 180);  /* Aplicar estilos solo a los elementos de tipo texto que estan dentro del formulario */
     margin-bottom: 15px; /* Margen inferior */
     margin-top: 2px; /* Margen superior */
     border-radius: 5px; /* Borde de las esquinas */
@@ -91,5 +91,20 @@ footer a { /* Seleccionamos y aplicamos mas caracteriticas a los link dentro de 
     cursor: pointer;
 }
 
-/* Selector atributo */
+/* Selector hijo */
 
+#menu > li > a {
+    font-size: 18px;
+    color: red;
+    text-decoration: none;
+}
+
+/* prioridad */
+
+#saludo h1 {
+    background: brown !important;
+}
+
+h1 {
+    background: purple !important;
+}
