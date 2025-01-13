@@ -1,0 +1,47 @@
+
+
+/* Fuentes personalizadas*/
+@font-face {
+    font-family: Mansalva-custom;
+    src: url(../fonts/Mansalva-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboto-custom-light;
+    src: url(../fonts/Roboto/static/Roboto-Light.ttf);
+}
+
+/* Aplicando fuentes personalizadas */
+h1 {
+    font-family: Mansalva-custom, cursive;
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 45px;
+
+    /* Colores del sistema */
+    color: mediumpurple;
+
+    /* Colores hexagecimales */
+    color: #6753ca99;
+
+    /* Colores RGB */
+    color: rgb(255, 255, 107);
+
+    /* Colores RGBA */
+    color: rgba(255, 19, 38, 1); /* a significa la transparencia del color que es el último parametro*/
+}
+
+h3 {
+    font-family: Roboto-custom-light; /* Aplicar un tipo de letra custom */
+    font-size: 25px; /* Propiedad para aumentar o disminuir el tamaño de la letra */
+    font-weight: lighter; /* Propiedad para eliminar la negrita */
+    color: olive;
+}
+
+p {
+    font-family: sans-serif; /* Aplicar un tipo de letra */
+    font-size: 18px; /* Tamaño de la letra */
+    font-weight: bold; /* Colocar un texto en negrita */
+}
+
+/* Trabajando con colores */
