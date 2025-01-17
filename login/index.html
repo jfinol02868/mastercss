@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login con Logo</title>
+    <style>
+
+        /*Fuente custom*/
+        @font-face {
+                font-family: 'Roboto-custom' ;
+                src: url("../fuentes/fonts/Roboto/static/Roboto-Light.ttf");
+        }
+
+        /* Estilo general */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Roboto-custom;
+        }
+
+        /* Contenedor principal */
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+
+        /* Contenedor del login */
+        .login-container {
+            display: flex;
+            flex-direction: row; /* Elementos en fila */
+            background: #ffffff;
+            width: 800px; /* Doble de ancho */
+            height: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden; /* Para evitar que sobresalgan los bordes */
+        }
+
+        /* Lado izquierdo: Logo */
+        .logo-container {
+            flex: 1; /* Ocupa la mitad del contenedor */
+            background: #007bff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            flex-direction: column;
+        }
+
+        .logo-container .logo {
+            width: 100px;
+            height: 100px;
+            background: white;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .logo-container .text {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Lado derecho: Formulario */
+        .form-container {
+            flex: 1; /* Ocupa la mitad del contenedor */
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-container h1 {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 24px;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="password"] {
+            width: 100%;
+            padding: 10px 15px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 10px 15px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-container button:hover {
+            background: #0056b3;
+        }
+
+        .form-container a {
+            margin-top: 15px;
+            color: #007bff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .form-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <!-- Lado izquierdo: Logo -->
+        <div class="logo-container">
+            <div class="logo">N</div>
+            <div class="text">NEURANEXA</div>
+        </div>
+        <!-- Lado derecho: Formulario -->
+        <div class="form-container">
+            <h1>Iniciar Sesión</h1>
+            <form action="#">
+                <input type="text" placeholder="Usuario" required>
+                <input type="password" placeholder="Contraseña" required>
+                <button type="submit">Entrar</button>
+            </form>
+            <a href="#">¿Olvidaste tu contraseña?</a>
+            <a href="#">¿No tienes cuenta? Regístrate</a>
+        </div>
+    </div>
+</body>
+</html>
