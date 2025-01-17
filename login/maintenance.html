@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio en Mantenimiento</title>
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Estilo del cuerpo */
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Contenedor principal */
+        .maintenance-container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Ícono de engranaje */
+        .maintenance-icon {
+            font-size: 100px;
+            color: #007bff;
+            margin-bottom: 20px;
+            animation: spin 2s linear infinite;
+        }
+
+        /* Texto del mensaje */
+        .maintenance-container h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .maintenance-container p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        /* Botón */
+        .maintenance-container a {
+            text-decoration: none;
+            color: #fff;
+            background: #007bff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .maintenance-container a:hover {
+            background: #0056b3;
+        }
+
+        /* Animación de rotación */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="maintenance-container">
+        <!-- Ícono de mantenimiento -->
+        <div class="maintenance-icon">⚙️</div>
+        <!-- Mensaje -->
+        <h1>Sitio en Mantenimiento</h1>
+        <p>Estamos trabajando en algo increíble. Por favor, vuelve más tarde.</p>
+        <!-- Botón -->
+        <a href="/">Volver al inicio</a>
+    </div>
+</body>
+</html>

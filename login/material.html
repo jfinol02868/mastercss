@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librería de Componentes</title>
+    <style>
+        /* === VARIABLES DE COLOR === */
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --success-color: #28a745;
+            --danger-color: #dc3545;
+            --warning-color: #ffc107;
+            --info-color: #17a2b8;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+            --white: #ffffff;
+            --black: #000000;
+        }
+
+        /* === RESET === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* === BOTONES === */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary-color);
+            color: var(--white);
+        }
+
+        .btn-secondary:hover {
+            background-color: #495057;
+        }
+
+        /* === FORMULARIOS === */
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid var(--secondary-color);
+            border-radius: 5px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        /* === BARRA DE PROGRESO === */
+        .progress-bar {
+            width: 100%;
+            background-color: var(--light-color);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress-bar .progress {
+            height: 20px;
+            width: 50%;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        /* === TABLAS === */
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: var(--white);
+            border: 1px solid var(--secondary-color);
+            border-radius: 5px;
+            overflow: hidden;
+            text-align: left;
+        }
+
+        .table th, .table td {
+            padding: 10px 15px;
+            border-bottom: 1px solid var(--secondary-color);
+        }
+
+        .table th {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .table tr:nth-child(even) {
+            background-color: var(--light-color);
+        }
+
+        .table tr:hover {
+            background-color: var(--info-color);
+            color: var(--white);
+        }
+
+        /* === NAVBAR === */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .navbar a {
+            color: var(--white);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        /* === SIDEBAR === */
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background-color: var(--dark-color);
+            color: var(--white);
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+
+        .sidebar ul li a {
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        /* === FOOTER === */
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: var(--dark-color);
+            color: var(--white);
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* === ICONOS Y ETIQUETAS === */
+        .icon {
+            font-size: 24px;
+            display: inline-block;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: 5px;
+        }
+
+        /* === IMÁGENES Y PERFILES === */
+        .profile-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .profile-icon img {
+            width: 100%;
+            height: auto;
+        }
+
+        .image-rounded {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        /* === MENÚS Y LISTAS === */
+        .menu {
+            display: flex;
+            list-style: none;
+            background-color: var(--primary-color);
+            padding: 10px;
+        }
+
+        .menu li {
+            margin: 0 10px;
+        }
+
+        .menu a {
+            color: var(--white);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div>Logo</div>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Acerca</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </div>
+
+    <div style="margin: 20px;">
+        <h1>Librería de Componentes</h1>
+
+        <h2>Botones</h2>
+        <button class="btn btn-primary">Botón Primario</button>
+        <button class="btn btn-secondary">Botón Secundario</button>
+
+        <h2>Formularios</h2>
+        <form>
+            <label class="form-label">Nombre</label>
+            <input type="text" class="form-input" placeholder="Introduce tu nombre">
+
+            <label class="form-label">Correo</label>
+            <input type="email" class="form-input" placeholder="Introduce tu correo">
+
+            <label class="form-label">Contraseña</label>
+            <input type="password" class="form-input" placeholder="Introduce tu contraseña">
+
+            <button class="btn btn-primary">Registrar</button>
+        </form>
+
+        <h2>Barras de Progreso</h2>
+        <div class="progress-bar">
+            <div class="progress" style="width: 75%;"></div>
+        </div>
+
+        <h2>Tablas</h2>
+        <div class="table-container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Juan Pérez</td>
+                        <td>juan@example.com</td>
+                        <td>Activo</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>María López</td>
+                        <td>maria@example.com</td>
+                        <td>Inactivo</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Carlos García</td>
+                        <td>carlos@example.com</td>
+                        <td>Activo</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>Iconos y Etiquetas</h2>
+        <div class="icon">⭐</div>
+        <div class="badge">Etiqueta</div>
+
+        <h2>Perfil</h2>
+        <div class="profile-icon">
+            <img src="https://via.placeholder.com/50" alt="Perfil">
+        </div>
+
+        <div class="footer">© 2025 Todos los derechos reservados</div>
+    </div>
+</body>
+</html>
