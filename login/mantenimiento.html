@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio en Construcción</title>
+    <style>
+        /* RESET Y VARIABLES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --light-color: #f4f4f4;
+            --dark-color: #343a40;
+            --white: #ffffff;
+        }
+
+        /* ESTILO DEL CUERPO */
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            text-align: center;
+        }
+
+        /* CONTENEDOR PRINCIPAL */
+        .construction-container {
+            padding: 20px;
+            max-width: 600px;
+        }
+
+        /* LOGO */
+        .logo {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: var(--dark-color);
+        }
+
+        /* MENSAJE */
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        /* ICONO DE TRABAJO */
+        .icon {
+            font-size: 4rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        /* BOTÓN */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="construction-container">
+        <!-- LOGO -->
+        <div class="logo">NEURA<span>NEXA</span></div>
+
+        <!-- ICONO -->
+        <div class="icon">🚧</div>
+
+        <!-- MENSAJE -->
+        <h1>Estamos trabajando en algo increíble</h1>
+        <p>Nuestro sitio estará disponible pronto. Gracias por tu paciencia.</p>
+
+        <!-- BOTÓN -->
+        <a href="/" class="btn">Volver al Inicio</a>
+    </div>
+</body>
+</html>
